@@ -27,7 +27,10 @@ type DbShape = {
   tutorialPlatforms: TutorialPlatform[];
 };
 
-const DATA_DIR = path.join(process.cwd(), "data");
+// On Vercel (serverless), the project root is read-only; use /tmp instead.
+const DATA_DIR = process.env.VERCEL
+  ? "/tmp/hub-mslz-data"
+  : path.join(process.cwd(), "data");
 const DB_FILE = path.join(DATA_DIR, "app-db.json");
 
 let initPromise: Promise<void> | null = null;
