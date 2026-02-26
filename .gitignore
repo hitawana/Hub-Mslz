@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+# database (contém hashes de senha e tokens de sessão — NUNCA commitar)
+data/app-db.json
+
 # system/editor
 .DS_Store
 Thumbs.db
