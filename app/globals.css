@@ -1,0 +1,148 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 245 240 232;
+  --surface: 255 255 255;
+  --text: 18 18 20;
+  --muted: 90 90 96;
+  --border: 226 226 226;
+  --accent: 207 33 43;
+  --accent2: 166 31 36;
+  --mustard: 224 166 41;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.surface {
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--border));
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.section-space {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.heading-2 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.heading-3 {
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.heading-4 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.text-body {
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 768px) {
+  .section-space {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .heading-2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .heading-3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .heading-4 {
+    font-size: 1.125rem;
+    line-height: 1.35;
+  }
+
+  .text-body {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes caret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.animate-float { animation: floaty 2.8s ease-in-out infinite; }
+.animate-caret { animation: caret 1s steps(1) infinite; }
+
+@layer components {
+  .section-title {
+    font-family: var(--font-title), sans-serif;
+    font-weight: 900;
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgb(var(--muted));
+  }
+
+  .card-title {
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: rgb(var(--text));
+  }
+
+  .card-body {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: rgb(var(--muted));
+  }
+
+  .meta-text {
+    font-size: 0.6875rem;
+    line-height: 1.35;
+    color: rgb(var(--muted));
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .meta-text {
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+  }
+}

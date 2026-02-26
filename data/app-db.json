@@ -1,0 +1,133 @@
+{
+    "users":  [
+                  {
+                      "id":  1,
+                      "email":  "admin@maplebear.com.br",
+                      "password_hash":  "31c916a20e8d14d3a8663fa7e5613956:96dc2898f0be5fdc8bb22d3091e07bfe16d8997c2148741edb5c38e4d4cd99aceadfe9702e68049a803abf3157642542003f7c9fb41065dc99a7acf2315c3df6",
+                      "created_at":  "2026-02-23T15:30:34.716Z"
+                  }
+              ],
+    "sessions":  [
+                     {
+                         "token":  "rKiJIhxvgYHI_OtP2rBnwnc9l6XP4XOsI-EK_SOoq94",
+                         "user_id":  1,
+                         "created_at":  "2026-02-26T14:17:18.366Z",
+                         "expires_at":  "2026-02-26T15:17:18.366Z"
+                     }
+                 ],
+    "news":  [
+                 {
+                     "id":  6,
+                     "tag":  "TI",
+                     "title":  "Atualizacao do portal institucional",
+                     "image_url":  "/news/news-1.png",
+                     "content":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+                     "published_at":  "2026-02-26T09:00:00.000Z",
+                     "redirect_enabled":  false,
+                     "redirect_label":  "",
+                     "redirect_url":  ""
+                 },
+                 {
+                     "id":  5,
+                     "tag":  "EFAF",
+                     "title":  "Cronograma de suporte pedagógico",
+                     "image_url":  "/news/news-2.png",
+                     "content":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+                     "published_at":  "2026-02-25T14:30:00.000Z",
+                     "redirect_enabled":  false,
+                     "redirect_label":  "",
+                     "redirect_url":  ""
+                 },
+                 {
+                     "id":  4,
+                     "tag":  "EFAI",
+                     "title":  "Novas orientacoes para laboratorio",
+                     "image_url":  "/news/news-3.png",
+                     "content":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                     "published_at":  "2026-02-24T11:15:00.000Z",
+                     "redirect_enabled":  true,
+                     "redirect_label":  "Abrir comunicado",
+                     "redirect_url":  "https://example.com/comunicado-lab"
+                 },
+                 {
+                     "id":  3,
+                     "tag":  "HS",
+                     "title":  "Melhorias em conectividade de salas",
+                     "image_url":  "/news/news-4.png",
+                     "content":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                     "published_at":  "2026-02-23T08:45:00.000Z",
+                     "redirect_enabled":  false,
+                     "redirect_label":  "",
+                     "redirect_url":  ""
+                 },
+                 {
+                     "id":  2,
+                     "tag":  "INFANTIL",
+                     "title":  "Atualizacao de recursos multimidia",
+                     "image_url":  "/news/news-1.png",
+                     "content":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                     "published_at":  "2026-02-22T16:05:00.000Z",
+                     "redirect_enabled":  false,
+                     "redirect_label":  "",
+                     "redirect_url":  ""
+                 },
+                 {
+                     "id":  1,
+                     "tag":  "TI",
+                     "title":  "Boletim semanal de infraestrutura",
+                     "image_url":  "/news/news-2.png",
+                     "content":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                     "published_at":  "2026-02-21T10:20:00.000Z",
+                     "redirect_enabled":  true,
+                     "redirect_label":  "Ler boletim",
+                     "redirect_url":  "https://example.com/boletim-ti"
+                 }
+             ],
+    "tutorials":  [
+                      {
+                          "id":  "844a93a2-0238-4b89-8e2d-7c315f781e7b",
+                          "title":  "Tutorial de uso do painel docente",
+                          "url":  "https://example.com/tutorial-docente",
+                          "platformId":  "5d02e3f6-d8de-4878-9206-54b74143af93",
+                          "status":  "active",
+                          "createdAt":  "2026-02-26T12:00:00.000Z",
+                          "updatedAt":  "2026-02-26T12:00:00.000Z"
+                      },
+                      {
+                          "id":  "da812a81-b889-46c1-a10a-c483a6da5ec2",
+                          "title":  "Como abrir chamados de TI",
+                          "url":  "https://example.com/tutorial-chamados",
+                          "platformId":  "5d02e3f6-d8de-4878-9206-54b74143af93",
+                          "status":  "active",
+                          "createdAt":  "2026-02-26T12:05:00.000Z",
+                          "updatedAt":  "2026-02-26T12:05:00.000Z"
+                      },
+                      {
+                          "id":  "03db1394-d68c-4bb9-9e88-d07be203f407",
+                          "title":  "Guia rapido do Google Meet",
+                          "url":  "https://example.com/tutorial-meet",
+                          "platformId":  "5d02e3f6-d8de-4878-9206-54b74143af93",
+                          "status":  "active",
+                          "createdAt":  "2026-02-26T12:10:00.000Z",
+                          "updatedAt":  "2026-02-26T12:10:00.000Z"
+                      },
+                      {
+                          "id":  "b4a6ceea-ed84-415f-a016-fe05b2da805b",
+                          "title":  "Organizacao de materiais no Classroom",
+                          "url":  "https://example.com/tutorial-classroom",
+                          "platformId":  "5d02e3f6-d8de-4878-9206-54b74143af93",
+                          "status":  "active",
+                          "createdAt":  "2026-02-26T12:15:00.000Z",
+                          "updatedAt":  "2026-02-26T12:15:00.000Z"
+                      }
+                  ],
+    "tutorialPlatforms":  [
+                              {
+                                  "id":  "5d02e3f6-d8de-4878-9206-54b74143af93",
+                                  "name":  "Toodle",
+                                  "slug":  "toodle",
+                                  "createdAt":  "2026-02-25T03:06:37.672Z",
+                                  "updatedAt":  "2026-02-25T03:06:37.672Z"
+                              }
+                          ]
+}
