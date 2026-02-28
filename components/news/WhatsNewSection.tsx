@@ -147,9 +147,9 @@ export function WhatsNewSection({ initialItems }: Props) {
               </div>
             </div>
           </button>
-        ) : data.items.length === 0 ? (
+        ) : (
           <div className="surface rounded-2xl p-5 text-sm text-muted">Nenhuma noticia cadastrada.</div>
-        ) : null}
+        )}
 
         <div className="grid gap-4 md:grid-cols-3">
           {data.items.slice(0, 3).map((item) => (
