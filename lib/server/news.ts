@@ -130,9 +130,9 @@ export async function deleteNews(id: number): Promise<boolean> {
 
 export async function getPublicNewsPage(page = 1, pageSize = 3): Promise<PublicNewsPage> {
   const sorted = await listAllNews();
-  const featured = sorted[0] ?? null;
+  const firstFeatured = sorted[0] ?? null;
 
-  if (!featured) {
+  if (!firstFeatured) {
     return { featured: null, page: 1, pages: 1, items: [] };
   }
 
@@ -140,6 +140,7 @@ export async function getPublicNewsPage(page = 1, pageSize = 3): Promise<PublicN
   const pages = Math.max(1, Math.ceil(rest.length / pageSize));
   const current = clampPage(page, pages);
   const start = (current - 1) * pageSize;
+  const featured = current === 1 ? firstFeatured : null;
 
   return {
     featured,
