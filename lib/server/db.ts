@@ -27,8 +27,23 @@ type DbShape = {
   tutorialPlatforms: TutorialPlatform[];
 };
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const DB_FILE = path.join(DATA_DIR, "app-db.json");
+function resolveDbFilePath() {
+  const configured = process.env.APP_DB_FILE?.trim();
+  if (configured) {
+    return path.isAbsolute(configured)
+      ? configured
+      : path.join(process.cwd(), configured);
+  }
+
+  if (process.env.VERCEL) {
+    return path.join("/tmp", "app-db.json");
+  }
+
+  return path.join(process.cwd(), "data", "app-db.json");
+}
+
+const DB_FILE = resolveDbFilePath();
+const DATA_DIR = path.dirname(DB_FILE);
 
 let initPromise: Promise<void> | null = null;
 

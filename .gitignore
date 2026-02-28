@@ -17,8 +17,10 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+# local json database
+data/app-db.json
+
 # system/editor
 .DS_Store
 Thumbs.db
 .vscode/
-
