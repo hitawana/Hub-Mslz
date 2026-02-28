@@ -10,7 +10,7 @@ export function Footer() {
           <p className="text-xs text-gray-400">E-mail: {FOOTER_EMAIL}</p>
         </div>
         <div className="mt-5 border-t border-white/10 pt-3 text-center">
-          <p className="text-xs text-gray-500">NIT - Maple Bear São Luís</p>
+          <p className="text-xs text-gray-500">NIT - escola Sao Luis</p>
         </div>
       </div>
     </footer>
