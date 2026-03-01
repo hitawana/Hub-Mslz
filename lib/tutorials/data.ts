@@ -46,5 +46,32 @@ export const DEFAULT_TUTORIALS: Tutorial[] = [
     status: "active",
     createdAt: "2026-02-26T12:15:00.000Z",
     updatedAt: "2026-02-26T12:15:00.000Z"
+  },
+  {
+    id: "tutorial-toodle-05",
+    title: "Google Drive",
+    url: "https://drive.google.com/",
+    platformId: "5d02e3f6-d8de-4878-9206-54b74143af93",
+    status: "active",
+    createdAt: "2026-02-26T12:20:00.000Z",
+    updatedAt: "2026-02-26T12:20:00.000Z"
+  },
+  {
+    id: "tutorial-toodle-06",
+    title: "Configuração de permissões no Drive",
+    url: "https://support.google.com/drive/answer/2494822",
+    platformId: "5d02e3f6-d8de-4878-9206-54b74143af93",
+    status: "active",
+    createdAt: "2026-02-26T12:25:00.000Z",
+    updatedAt: "2026-02-26T12:25:00.000Z"
+  },
+  {
+    id: "tutorial-toodle-07",
+    title: "Boas práticas em videoaulas",
+    url: "https://example.com/tutorial-boas-praticas-videoaulas",
+    platformId: "5d02e3f6-d8de-4878-9206-54b74143af93",
+    status: "active",
+    createdAt: "2026-02-26T12:30:00.000Z",
+    updatedAt: "2026-02-26T12:30:00.000Z"
   }
 ];

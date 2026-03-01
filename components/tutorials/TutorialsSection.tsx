@@ -44,6 +44,8 @@ export function TutorialsSection({ tutorials, platforms }: Props) {
     return tutorials.filter((t) => selected.has(t.platformId));
   }, [tutorials, selectedPlatformIds]);
 
+  const totalFiltered = filtered.length;
+  const canExpand = totalFiltered > COLLAPSED_COUNT;
   const visible = expanded ? filtered : filtered.slice(0, COLLAPSED_COUNT);
 
   const togglePlatform = (id: string) => {
@@ -143,7 +145,7 @@ export function TutorialsSection({ tutorials, platforms }: Props) {
               })}
             </div>
 
-            {filtered.length > COLLAPSED_COUNT ? (
+            {canExpand ? (
               <div className="mt-6 flex justify-center">
                 <button
                   type="button"
