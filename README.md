@@ -1,17 +1,8 @@
-# Hub MSLZ Portal (portal-official)
+# Hub MSLZ Portal
 
 Portal institucional em Next.js para centralizar conteúdo público e gestão administrativa.
 
 A aplicação reúne as seções Hero, Tools, What's New e Tutorials na home pública, além de autenticação e painel Admin para gerenciamento de notícias e tutoriais.
-
-## Stack
-
-- Next.js 15 (App Router)
-- React 19
-- TypeScript
-- Tailwind CSS
-- Node.js + npm
-- Persistência em arquivo JSON via `lib/server/db.ts`
 
 ## Funcionalidades principais
 
@@ -19,17 +10,6 @@ A aplicação reúne as seções Hero, Tools, What's New e Tutorials na home pú
 - Busca de conteúdo na home (notícias, ferramentas e tutoriais)
 - Autenticação administrativa com cookie HttpOnly e sessão persistida
 - CRUD de notícias e tutoriais via rotas internas em `app/api`
-
-## Variáveis de ambiente
-
-Nomes utilizados pelo projeto:
-
-- `ADMIN_EMAIL`
-- `ADMIN_PASSWORD`
-- `JWT_ACCESS_TTL_SECONDS`
-- `APP_DB_FILE` (opcional)
-
-Referência de formato: `.env.example`.
 
 ## Dados e seed
 
