@@ -9,7 +9,7 @@ type Props = {
   platforms: TutorialPlatform[];
 };
 
-const COLLAPSED_COUNT = 3;
+const COLLAPSED_COUNT = 4;
 
 export function TutorialsSection({ tutorials, platforms }: Props) {
   const [expanded, setExpanded] = useState(false);
