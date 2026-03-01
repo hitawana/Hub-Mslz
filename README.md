@@ -1,39 +1,60 @@
-# portal-official
+# Hub MSLZ Portal (portal-official)
 
-Projeto consolidado para HERO + TOOLS + WHAT''S NEW + ADMIN, com base nas variacoes Node/Next.
+Portal institucional em Next.js para centralizar conteúdo público e gestão administrativa.
 
-## Status atual
+A aplicação reúne as seções Hero, Tools, What's New e Tutorials na home pública, além de autenticação e painel Admin para gerenciamento de notícias e tutoriais.
 
-### Publico
+## Stack
 
-- HERO implementado
-- TOOLS implementado
-- What''s New implementado na home
-- API publica de noticias:
-  - `GET /api/public/news?page=1&page_size=3`
-  - `GET /api/public/news/:id`
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS
+- Node.js + npm
+- Persistência em arquivo JSON via `lib/server/db.ts`
 
-### Admin (Passo 2)
+## Funcionalidades principais
 
-- Login real via API (`POST /api/auth/login`) com cookie HttpOnly
-- Sessao persistida em arquivo (`data/app-db.json`)
-- Validacao de sessao em paginas admin (server-side)
-- Logout real (`POST /api/auth/logout`)
-- Endpoint de usuario autenticado (`GET /api/auth/me`)
-- CRUD completo de noticias:
-  - `GET /api/admin/news`
-  - `POST /api/admin/news`
-  - `GET /api/admin/news/:id`
-  - `PUT /api/admin/news/:id`
-  - `DELETE /api/admin/news/:id`
-- UI Admin conectada aos endpoints (login/dashboard/criar/editar/excluir)
+- Home pública com Hero, Tools, What's New e Tutorials
+- Busca de conteúdo na home (notícias, ferramentas e tutoriais)
+- Autenticação administrativa com cookie HttpOnly e sessão persistida
+- CRUD de notícias e tutoriais via rotas internas em `app/api`
 
-## Configuracao de credenciais
+## Variáveis de ambiente
 
-- Defina `ADMIN_EMAIL` no arquivo `.env` (obrigatorio para ambiente local).
-- Defina `ADMIN_PASSWORD` no arquivo `.env` (obrigatorio para ambiente local).
-- `JWT_ACCESS_TTL_SECONDS` pode ser definido no `.env` (sugestao: `3600`).
+Nomes utilizados pelo projeto:
 
-## Observacao tecnica
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
+- `JWT_ACCESS_TTL_SECONDS`
+- `APP_DB_FILE` (opcional)
 
-A persistencia atual usa arquivo JSON local em `data/app-db.json` para simplificar esta entrega. Em producao, recomenda-se migrar para banco transacional.
+Referência de formato: `.env.example`.
+
+## Dados e seed
+
+O seed é aplicado quando o arquivo de dados ainda não existe.
+
+- Arquivo de dados local padrão: `data/app-db.json`
+- Em ambiente Vercel: `"/tmp/app-db.json"` quando `VERCEL` está definido
+- Implementação: `lib/server/db.ts`
+
+Fontes de seed:
+
+- Notícias: `lib/news/data.ts`
+- Tutoriais e plataformas: `lib/tutorials/data.ts`
+
+Regra atual:
+
+- O seed é executado apenas na criação inicial do arquivo de dados.
+- Se o arquivo já existir, os dados não são sobrescritos automaticamente.
+
+## Estrutura de pastas
+
+```text
+app/         # páginas (App Router) e rotas de API
+components/  # componentes de UI (hero, tools, news, tutorials, admin, etc.)
+lib/         # regras de domínio, serviços, tipos e utilitários
+public/      # assets estáticos
+data/        # arquivo JSON local de persistência
+```
